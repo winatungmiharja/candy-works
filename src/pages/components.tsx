@@ -1,4 +1,3 @@
-// !STARTERCONF You can delete this page
 import clsx from 'clsx';
 import * as React from 'react';
 
@@ -128,7 +127,7 @@ export default function ComponentsPage() {
                 </p>
                 <div className='space-x-2'>
                   <UnstyledLink href='/'>Internal Links</UnstyledLink>
-                  <UnstyledLink href='https://theodorusclarence.com'>
+                  <UnstyledLink href='https://winatungmiharja.com'>
                     Outside Links
                   </UnstyledLink>
                 </div>
@@ -141,7 +140,7 @@ export default function ComponentsPage() {
                 </p>
                 <div className='space-x-2'>
                   <PrimaryLink href='/'>Internal Links</PrimaryLink>
-                  <PrimaryLink href='https://theodorusclarence.com'>
+                  <PrimaryLink href='https://winatungmiharja.com'>
                     Outside Links
                   </PrimaryLink>
                 </div>
@@ -154,7 +153,7 @@ export default function ComponentsPage() {
                 </p>
                 <div className='space-x-2'>
                   <UnderlineLink href='/'>Internal Links</UnderlineLink>
-                  <UnderlineLink href='https://theodorusclarence.com'>
+                  <UnderlineLink href='https://winatungmiharja.com'>
                     Outside Links
                   </UnderlineLink>
                 </div>
@@ -195,33 +194,30 @@ export default function ComponentsPage() {
                 <div className='flex flex-wrap gap-2'>
                   <ButtonLink
                     variant='primary'
-                    href='https://theodorusclarence.com'
+                    href='https://winatungmiharja.com'
                   >
                     Primary Variant
                   </ButtonLink>
                   <ButtonLink
                     variant='outline'
                     isDarkBg={mode === 'dark'}
-                    href='https://theodorusclarence.com'
+                    href='https://winatungmiharja.com'
                   >
                     Outline Variant
                   </ButtonLink>
                   <ButtonLink
                     variant='ghost'
                     isDarkBg={mode === 'dark'}
-                    href='https://theodorusclarence.com'
+                    href='https://winatungmiharja.com'
                   >
                     Ghost Variant
                   </ButtonLink>
-                  <ButtonLink
-                    variant='dark'
-                    href='https://theodorusclarence.com'
-                  >
+                  <ButtonLink variant='dark' href='https://winatungmiharja.com'>
                     Dark Variant
                   </ButtonLink>
                   <ButtonLink
                     variant='light'
-                    href='https://theodorusclarence.com'
+                    href='https://winatungmiharja.com'
                   >
                     Light Variant
                   </ButtonLink>

@@ -6,12 +6,16 @@ module.exports = {
   content: ['./src/**/*.{js,jsx,ts,tsx}'],
   theme: {
     extend: {
+      backgroundImage: {
+        texture: 'url(/images/bg-texture.png)',
+      },
       fontFamily: {
-        primary: ['Inter', ...fontFamily.sans],
+        heading: ['Cyriele', ...fontFamily.sans],
+        accent: ['Mutually Beneficial', ...fontFamily.sans],
+        body: ['Megabyte', ...fontFamily.sans],
       },
       colors: {
         primary: {
-          // Customize it on globals.css :root
           50: 'rgb(var(--tw-color-primary-50) / <alpha-value>)',
           100: 'rgb(var(--tw-color-primary-100) / <alpha-value>)',
           200: 'rgb(var(--tw-color-primary-200) / <alpha-value>)',
@@ -23,7 +27,23 @@ module.exports = {
           800: 'rgb(var(--tw-color-primary-800) / <alpha-value>)',
           900: 'rgb(var(--tw-color-primary-900) / <alpha-value>)',
         },
-        dark: '#222222',
+        'c-orange': {
+          light: '#FFC678',
+          dark: '#FFA06D',
+        },
+        'c-purple': {
+          light: '#B99CDC',
+          dark: '#715CCE',
+        },
+        'c-green': {
+          light: '#C2D3A5',
+          dark: '#73C6AB',
+        },
+        'c-blue': {
+          light: '#13375C',
+          dark: '#151E37',
+        },
+        dark: '#0B1825',
       },
       keyframes: {
         flicker: {
