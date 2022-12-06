@@ -52,6 +52,9 @@ export default function DetailSection() {
           </div>
           {/* Detail Produk */}
           <div className='h-full w-full '>
+            {/* 
+            //!TODO Warren 
+            */}
             <h1>Detail Produk {data[active].name}</h1>
           </div>
         </div>

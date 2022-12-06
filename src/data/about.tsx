@@ -1,8 +1,9 @@
+//!TODO Hansen
 export const LandingPage = {
   button: 'Discover',
   description: <>Lorem ipsum dolor sit amet, consectetur adipiscing elit.s</>,
 };
-
+//!TODO Hansen
 export const AboutPage = {
   button: {
     title: 'Select & See',

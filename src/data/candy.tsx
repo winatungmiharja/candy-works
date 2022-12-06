@@ -1,5 +1,5 @@
 import { CandyDataType, CandyType } from '@/types/candy.';
-
+//!TODO James
 export const CandyData: { [key in keyof typeof CandyType]: CandyDataType } = {
   mentoz: {
     url: 'mentoz',
