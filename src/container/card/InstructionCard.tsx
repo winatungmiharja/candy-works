@@ -3,6 +3,8 @@ import { HiOutlineEye } from 'react-icons/hi';
 
 import clsxm from '@/lib/clsxm';
 
+import { AboutPage } from '@/data/about';
+
 export default function InstructionCard({
   className,
 }: React.ComponentPropsWithoutRef<'div'>) {
@@ -15,9 +17,11 @@ export default function InstructionCard({
     >
       <div>
         <h5 className='font-body text-2xl font-medium text-white'>
-          Select & See
+          {AboutPage.button.title}
         </h5>
-        <p className='font-body  text-white/90'>lorem ipsum sit dolor</p>
+        <p className='font-body  text-white/90'>
+          {AboutPage.button.description}
+        </p>
       </div>
       <HiOutlineEye size={36} />
     </div>

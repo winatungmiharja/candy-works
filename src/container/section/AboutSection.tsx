@@ -3,6 +3,7 @@ import * as React from 'react';
 import { Parallax } from 'react-scroll-parallax';
 import { Canvas } from 'react-three-fiber';
 
+import { AboutPage } from '@/data/about';
 import { CandyData } from '@/data/candy';
 
 import NextImage from '@/components/NextImage';
@@ -92,8 +93,7 @@ function PlaySection() {
         <div className='flex items-center'>
           <hr className='w-[calc(24px+64px)] border-transparent' />
           <p className='max-w-xs  font-body text-white/90'>
-            Reference site about Lorem Ipsum, giving information on its origins,
-            as well as a random Lipsum generator.
+            {AboutPage.information}
           </p>
         </div>
       </div>

@@ -13,6 +13,8 @@ export type Candy = {
 export type CandyDataType = {
   url: keyof typeof CandyType;
   name: string;
-  description: React.ReactNode;
   sold: number;
+  description: React.ReactNode;
+  nutrition: React.ReactNode;
+  ingredients: React.ReactNode;
 };

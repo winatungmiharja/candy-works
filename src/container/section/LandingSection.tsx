@@ -1,6 +1,8 @@
 import React from 'react';
 import { Parallax } from 'react-scroll-parallax';
 
+import { LandingPage } from '@/data/about';
+
 import ButtonLink from '@/components/links/ButtonLink';
 import NextImage from '@/components/NextImage';
 
@@ -14,11 +16,11 @@ export default function LandingSection() {
         </h1>
 
         <p className='mt-4 max-w-sm text-center font-body'>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+          {LandingPage.description}
         </p>
 
         <ButtonLink href='#about' className='mt-8'>
-          Discover
+          {LandingPage.button}
         </ButtonLink>
       </div>
       <div className='pointer-events-none absolute inset-0 h-full w-full'>
