@@ -17,7 +17,7 @@ export default function LandingSection() {
           Lorem ipsum dolor sit amet, consectetur adipiscing elit.
         </p>
 
-        <ButtonLink href='/' className='mt-8'>
+        <ButtonLink href='#about' className='mt-8'>
           Discover
         </ButtonLink>
       </div>

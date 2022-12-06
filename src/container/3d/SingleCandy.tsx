@@ -10,9 +10,11 @@ import { CandyType } from '@/types/candy.';
 export default function SingleCandy({
   name,
   position,
+  scale = 0.04,
 }: {
   name: keyof typeof CandyType;
   position: number[];
+  scale?: number;
 }) {
   const [hover, setHover] = React.useState<boolean>(false);
   const [active, setActive] = React.useState<boolean>(false);
@@ -37,7 +39,7 @@ export default function SingleCandy({
       onPointerEnter={() => setHover(true)}
       onPointerOut={() => setHover(false)}
     >
-      <primitive object={gltf.scene} position={position} scale={0.04} />
+      <primitive object={gltf.scene} position={position} scale={scale} />
     </animated.mesh>
   );
 }

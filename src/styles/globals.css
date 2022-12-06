@@ -108,6 +108,10 @@
 
   /* #endregion  /**======== Local Fonts =========== */
 
+  html {
+    scroll-behavior: smooth;
+  }
+
   .cursor-newtab {
     cursor: url('/images/new-tab.png') 10 10, pointer;
   }
@@ -182,4 +186,18 @@
   .animated-underline:focus-visible {
     background-size: 0 2px, 100% 2px;
   }
+}
+
+/* Minimal Scrollbar Design */
+html::-webkit-scrollbar {
+  width: 4px;
+}
+html::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.1);
+  background: #ffffff;
+}
+html::-webkit-scrollbar-thumb {
+  background-color: #333333;
+  opacity: 1;
+  border-radius: 10px;
 }
