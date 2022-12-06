@@ -8,64 +8,52 @@ import UnstyledLink, {
 
 enum ButtonVariant {
   'primary',
+  'secondary',
   'outline',
   'ghost',
-  'light',
-  'dark',
 }
 
 type ButtonLinkProps = {
-  isDarkBg?: boolean;
   variant?: keyof typeof ButtonVariant;
 } & UnstyledLinkProps;
 
 const ButtonLink = React.forwardRef<HTMLAnchorElement, ButtonLinkProps>(
-  (
-    { children, className, variant = 'primary', isDarkBg = false, ...rest },
-    ref
-  ) => {
+  ({ children, className, variant = 'primary', ...rest }, ref) => {
     return (
       <UnstyledLink
         ref={ref}
         {...rest}
         className={clsxm(
-          'inline-flex items-center rounded px-4 py-2 font-medium',
-          'focus:outline-none focus-visible:ring focus-visible:ring-primary-500',
+          'inline-flex items-center rounded-full px-4 py-2 font-body font-medium',
+          'focus:outline-none focus-visible:ring focus-visible:ring-c-purple-dark',
           'shadow-sm',
           'transition-colors duration-75',
           //#region  //*=========== Variants ===========
           [
             variant === 'primary' && [
-              'bg-primary-500 text-white',
-              'border border-primary-600',
-              'hover:bg-primary-600 hover:text-white',
-              'active:bg-primary-500',
+              'bg-c-blue-dark text-white',
+              'border border-c-blue-dark',
+              'from-c-blue-light to-c-blue-dark hover:bg-gradient-to-br hover:text-white',
+              'active:bg-c-purple-dark',
               'disabled:bg-primary-400 disabled:hover:bg-primary-400',
             ],
+            variant === 'secondary' && [
+              'text-white',
+              'border border-c-purple-light',
+              'bg-gradient-to-br from-c-purple-light to-c-purple-dark ',
+              'hover:from-c-purple-dark hover:to-c-purple-dark',
+              'active:bg-c-purple-dark disabled:bg-c-purple-light',
+            ],
             variant === 'outline' && [
-              'text-primary-500',
-              'border border-primary-500',
-              'hover:bg-primary-50 active:bg-primary-100 disabled:bg-primary-100',
-              isDarkBg &&
-                'hover:bg-gray-900 active:bg-gray-800 disabled:bg-gray-800',
+              'text-white',
+              'border border-c-purple-light',
+              'from-c-purple-light to-c-purple-dark hover:bg-gradient-to-br hover:text-white',
+              'active:bg-c-purple-dark disabled:bg-c-purple-light',
             ],
             variant === 'ghost' && [
-              'text-primary-500',
+              'text-c-purple-light',
               'shadow-none',
-              'hover:bg-primary-50 active:bg-primary-100 disabled:bg-primary-100',
-              isDarkBg &&
-                'hover:bg-gray-900 active:bg-gray-800 disabled:bg-gray-800',
-            ],
-            variant === 'light' && [
-              'bg-white text-dark ',
-              'border border-gray-300',
-              'hover:bg-gray-100 hover:text-dark',
-              'active:bg-white/80 disabled:bg-gray-200',
-            ],
-            variant === 'dark' && [
-              'bg-gray-900 text-white',
-              'border border-gray-600',
-              'hover:bg-gray-800 active:bg-gray-700 disabled:bg-gray-700',
+              'hover:bg-c-purple-dark hover:text-white active:bg-primary-100 disabled:bg-primary-100',
             ],
           ],
           //#endregion  //*======== Variants ===========

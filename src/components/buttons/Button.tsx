@@ -5,15 +5,14 @@ import clsxm from '@/lib/clsxm';
 
 enum ButtonVariant {
   'primary',
+  'secondary',
   'outline',
   'ghost',
-  'light',
-  'dark',
 }
 
 type ButtonProps = {
   isLoading?: boolean;
-  isDarkBg?: boolean;
+
   variant?: keyof typeof ButtonVariant;
 } & React.ComponentPropsWithRef<'button'>;
 
@@ -25,7 +24,7 @@ const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
       disabled: buttonDisabled,
       isLoading,
       variant = 'primary',
-      isDarkBg = false,
+
       ...rest
     },
     ref
@@ -38,43 +37,36 @@ const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
         type='button'
         disabled={disabled}
         className={clsxm(
-          'inline-flex items-center rounded px-4 py-2 font-medium',
+          'inline-flex items-center rounded-full px-4 py-2 font-body font-medium',
           'focus:outline-none focus-visible:ring focus-visible:ring-primary-500',
           'shadow-sm',
           'transition-colors duration-75',
           //#region  //*=========== Variants ===========
           [
             variant === 'primary' && [
-              'bg-primary-500 text-white',
-              'border border-primary-600',
-              'hover:bg-primary-600 hover:text-white',
-              'active:bg-primary-500',
-              'disabled:bg-primary-400 disabled:hover:bg-primary-400',
+              'bg-c-blue-dark text-white',
+              'border border-c-blue-dark',
+              'from-c-blue-light to-c-blue-dark hover:bg-gradient-to-br hover:text-white',
+              'active:bg-c-purple-dark',
+              'disabled:bg-c-blue-light disabled:hover:bg-c-blue-light',
+            ],
+            variant === 'secondary' && [
+              'text-white',
+              'border border-c-purple-light',
+              'bg-gradient-to-br from-c-purple-light to-c-purple-dark ',
+              'hover:from-c-purple-dark hover:to-c-purple-dark',
+              'active:bg-c-purple-dark disabled:bg-primary-100',
             ],
             variant === 'outline' && [
-              'text-primary-500',
-              'border border-primary-500',
-              'hover:bg-primary-50 active:bg-primary-100 disabled:bg-primary-100',
-              isDarkBg &&
-                'hover:bg-gray-900 active:bg-gray-800 disabled:bg-gray-800',
+              'text-white',
+              'border border-c-purple-light',
+              'from-c-purple-light to-c-purple-dark hover:bg-gradient-to-br hover:text-white',
+              'active:bg-c-purple-dark ',
             ],
             variant === 'ghost' && [
-              'text-primary-500',
+              'text-c-purple-light',
               'shadow-none',
-              'hover:bg-primary-50 active:bg-primary-100 disabled:bg-primary-100',
-              isDarkBg &&
-                'hover:bg-gray-900 active:bg-gray-800 disabled:bg-gray-800',
-            ],
-            variant === 'light' && [
-              'bg-white text-dark ',
-              'border border-gray-300',
-              'hover:bg-gray-100 hover:text-dark',
-              'active:bg-white/80 disabled:bg-gray-200',
-            ],
-            variant === 'dark' && [
-              'bg-gray-900 text-white',
-              'border border-gray-600',
-              'hover:bg-gray-800 active:bg-gray-700 disabled:bg-gray-700',
+              'hover:bg-c-purple-dark hover:text-white active:bg-primary-100',
             ],
           ],
           //#endregion  //*======== Variants ===========
@@ -90,8 +82,8 @@ const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
             className={clsxm(
               'absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2',
               {
-                'text-white': ['primary', 'dark'].includes(variant),
-                'text-black': ['light'].includes(variant),
+                'text-white': ['primary'].includes(variant),
+                'text-black': ['secondary'].includes(variant),
                 'text-primary-500': ['outline', 'ghost'].includes(variant),
               }
             )}

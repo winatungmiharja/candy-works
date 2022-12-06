@@ -1,3 +1,5 @@
+import React from 'react';
+
 export enum CandyType {
   'chupa-cupz',
   'dalgona',
@@ -6,4 +8,11 @@ export enum CandyType {
 }
 export type Candy = {
   type: keyof typeof CandyType;
+};
+
+export type CandyDataType = {
+  url: keyof typeof CandyType;
+  name: string;
+  description: React.ReactNode;
+  sold: number;
 };

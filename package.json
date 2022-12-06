@@ -29,6 +29,7 @@
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-icons": "^4.7.1",
+    "react-scroll-parallax": "^3.3.2",
     "react-three-fiber": "^6.0.13",
     "tailwind-merge": "^1.8.0",
     "three": "^0.147.0",

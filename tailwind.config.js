@@ -7,7 +7,9 @@ module.exports = {
   theme: {
     extend: {
       backgroundImage: {
-        texture: 'url(/images/bg-texture.png)',
+        texture: 'url(/images/assets/bg/texture.png)',
+        landing: 'url(/images/assets/bg/landing.jpg)',
+        about: 'url(/images/assets/bg/about.jpg)',
       },
       fontFamily: {
         heading: ['Cyriele', ...fontFamily.sans],
@@ -27,23 +29,15 @@ module.exports = {
           800: 'rgb(var(--tw-color-primary-800) / <alpha-value>)',
           900: 'rgb(var(--tw-color-primary-900) / <alpha-value>)',
         },
-        'c-orange': {
-          light: '#FFC678',
-          dark: '#FFA06D',
-        },
         'c-purple': {
           light: '#B99CDC',
           dark: '#715CCE',
         },
-        'c-green': {
-          light: '#C2D3A5',
-          dark: '#73C6AB',
-        },
         'c-blue': {
-          light: '#13375C',
-          dark: '#151E37',
+          light: '#35187A',
+          dark: '#000229',
         },
-        dark: '#0B1825',
+        'c-pink': '#D41181',
       },
       keyframes: {
         flicker: {
