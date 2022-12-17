@@ -51,11 +51,27 @@ export default function DetailSection() {
             </div>
           </div>
           {/* Detail Produk */}
-          <div className='h-full w-full '>
+          <div className='h-full w-full ml-3'>
             {/* 
-            //!TODO Warren 
+            //!TODO Warren
             */}
-            <h1>Detail Produk {data[active].name}</h1>
+            <h1 className='font-heading text-[calc(75vw/15)] leading-none'>{data[active].name}</h1>
+            
+            {/* Description */}
+            <h2 className= 'mt-10 text-[calc(25vw/10)] font-body'>Description</h2>
+            <p className='mt-5 mb-5 font-body text-white/90'>{data[active].description}</p>
+            <hr></hr>
+
+            {/* Nutrition */}
+            <h2 className= 'mt-5 text-[calc(25vw/10)] font-body'>Nutrition</h2>
+            <p className='mt-5 mb-5 font-body text-white/90'>{data[active].nutrition}</p>
+            <hr></hr>
+
+            {/* Ingredients */}
+            <h2 className= 'mt-5 text-[calc(25vw/10)] font-body'>Ingredients</h2>
+            <p className='mt-5 mb-5 font-body text-white/90'>{data[active].ingredients}</p>
+            <hr></hr>
+
           </div>
         </div>
         <div className='mt-12  h-full max-h-[50vh] w-full overflow-hidden p-4 sm:mt-0 sm:max-h-max sm:p-0'>
