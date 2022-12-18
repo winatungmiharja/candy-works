@@ -51,7 +51,7 @@ export default function DetailSection() {
             </div>
           </div>
           {/* Detail Produk */}
-          <div className='ml-3 h-full w-full'>
+          <div className='ml-3 mr-3 h-full w-fit'>
             {/* 
             //!TODO Warren
             */}
