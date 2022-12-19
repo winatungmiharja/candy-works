@@ -1,4 +1,3 @@
-//!TODO Hansen
 export const LandingPage = {
   button: 'Discover',
   description: (
@@ -9,7 +8,7 @@ export const LandingPage = {
     </>
   ),
 };
-//!TODO Hansen
+
 export const AboutPage = {
   button: {
     title: 'Select & See',
