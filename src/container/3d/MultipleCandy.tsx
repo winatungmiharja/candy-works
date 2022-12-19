@@ -3,9 +3,9 @@ import React from 'react';
 import SingleCandy from '@/container/3d/SingleCandy';
 
 export default function MultipleCandy() {
+  React;
   return (
-    //!TODO Aaliyah
-    <React.Fragment>
+    <group>
       {/* Chupa-chupz */}
       <SingleCandy name='chupa-cupz' position={[-0.34, 0.82, -0.15]} />
 
@@ -17,6 +17,6 @@ export default function MultipleCandy() {
 
       {/* Suguz */}
       <SingleCandy name='suguz' position={[0.3, 0.79, -0.15]} />
-    </React.Fragment>
+    </group>
   );
 }

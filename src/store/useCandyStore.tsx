@@ -8,7 +8,7 @@ import { Candy } from '@/types/candy.';
 type CandyStoreType = {
   state: Candy | null;
   isOpen: boolean;
-  schedule: (data: Candy) => void;
+  candy: (data: Candy) => void;
   open: () => void;
   close: () => void;
 };
@@ -20,7 +20,7 @@ const useCandyStoreBase = create<CandyStoreType>(
       state: {
         type: 'chupa-cupz',
       },
-      schedule: (data) => {
+      candy: (data) => {
         set(
           produce<CandyStoreType>((state) => {
             state.isOpen = true;

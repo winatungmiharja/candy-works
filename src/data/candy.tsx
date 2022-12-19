@@ -4,7 +4,7 @@ export const CandyData: { [key in keyof typeof CandyType]: CandyDataType } = {
   mentoz: {
     url: 'mentoz',
     name: 'Mentoz',
-    sold: 100,
+    sold: 123,
     description:
       'Candy with a strong mint flavor provides freshness all day long',
     nutrition: (
@@ -25,7 +25,7 @@ export const CandyData: { [key in keyof typeof CandyType]: CandyDataType } = {
   suguz: {
     url: 'suguz',
     name: 'Suguz',
-    sold: 100,
+    sold: 102,
     description: 'Sweet candy that spoils your mouth',
     nutrition: (
       <>
@@ -45,7 +45,7 @@ export const CandyData: { [key in keyof typeof CandyType]: CandyDataType } = {
   dalgona: {
     url: 'dalgona',
     name: 'Dalgona',
-    sold: 100,
+    sold: 87,
     description: 'Boost your energy with Dalgona ',
     nutrition: (
       <>

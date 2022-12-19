@@ -19,27 +19,34 @@ export default function SingleCandy({
   const [hover, setHover] = React.useState<boolean>(false);
   const [active, setActive] = React.useState<boolean>(false);
 
-  const open = useCandyStore.useOpen();
+  const candy = useCandyStore.useCandy();
 
-  const gltf = useLoader(GLTFLoader, `/images/candy/${name}.glb`);
+  const { scene } = useLoader(GLTFLoader, `/images/candy/${name}.glb`);
   const spring = useSpring({
-    scale: hover ? 1.2 : 1,
+    scale: hover ? 1.1 : 1,
     config: config.wobbly,
   });
 
   React.useEffect(() => {
-    active && open();
+    if (active) {
+      candy({
+        type: name,
+      });
+    }
     setActive(false);
-  }, [active, open]);
+  }, [active, candy, name]);
 
+  const copiedScene = React.useMemo(() => scene.clone(), [scene]);
   return (
-    <animated.mesh
-      {...spring}
-      onClick={() => setActive(true)}
-      onPointerEnter={() => setHover(true)}
-      onPointerOut={() => setHover(false)}
-    >
-      <primitive object={gltf.scene} position={position} scale={scale} />
-    </animated.mesh>
+    <group>
+      <animated.mesh
+        {...spring}
+        onClick={() => setActive(true)}
+        onPointerEnter={() => setHover(true)}
+        onPointerOut={() => setHover(false)}
+      >
+        <primitive object={copiedScene} position={position} scale={scale} />
+      </animated.mesh>
+    </group>
   );
 }

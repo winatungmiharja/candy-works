@@ -22,7 +22,7 @@ export default function AboutSection() {
     >
       <CandyDetailModal />
       <div className='relative z-10 mx-4 my-16 flex w-full flex-col justify-center gap-8 text-white sm:mx-12  sm:flex-row 2xl:mx-16'>
-        <div className='relative z-10 flex w-full flex-col items-center'>
+        <div className='relative flex w-full flex-col items-center'>
           <div className='block  flex-col gap-6 sm:hidden'>
             <InstructionCard />
             <p className='my-4 max-w-xs font-body text-white/90 sm:mt-0'>
@@ -32,7 +32,7 @@ export default function AboutSection() {
           </div>
           <PlaySection />
         </div>
-        <div className='inset-0 h-full w-full sm:absolute '>
+        <div className='inset-0  h-full w-full sm:absolute'>
           <div>
             <h1 className='font-heading text-[max(calc(100vw/30),36px)] leading-none '>
               Top PicKs
